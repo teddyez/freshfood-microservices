@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Current Project Rules
+
+- This Repo is following Clean Architecture.
+

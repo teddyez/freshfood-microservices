@@ -1,0 +1,86 @@
+{
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "All Services",
+            "configurations": [
+                "FreshFood API",
+                "APIGateway"
+            ]
+        }
+    ],
+    "configurations": [
+        {
+            "name": "FreshFood API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build FreshFood API",
+            "program": "${workspaceFolder}/Services/Store/FreshFood.API/bin/Debug/net9.0/FreshFood.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Services/Store/FreshFood.API",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "pipeTransport": {
+                "pipeProgram": "cmd",
+                "pipeArgs": [
+                    "/c"
+                ],
+                "debuggerPath": "C:\\Users\\bideveloper\\scoop\\shims\\netcoredbg.exe"
+            }
+        },
+        {
+            "name": "APIGateway",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build APIGateway",
+            "program": "${workspaceFolder}/Services/Gateway/APIGateway/bin/Debug/net9.0/APIGateway.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Services/Gateway/APIGateway",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "pipeTransport": {
+                "pipeProgram": "cmd",
+                "pipeArgs": [
+                    "/c"
+                ],
+                "debuggerPath": "C:\\Users\\bideveloper\\scoop\\shims\\netcoredbg.exe"
+            }
+        },
+        {
+            "name": "Identity API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build Identity API",
+            "program": "${workspaceFolder}/Services/Identity/Identity.API/bin/Debug/net9.0/Identity.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Services/Identity/Identity.API",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "pipeTransport": {
+                "pipeProgram": "cmd",
+                "pipeArgs": [
+                    "/c"
+                ],
+                "debuggerPath": "C:\\Users\\bideveloper\\scoop\\shims\\netcoredbg.exe"
+            }
+        }
+    ]
+}
